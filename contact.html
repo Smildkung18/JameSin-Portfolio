@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Seni Gohsongnoen - Web Developer Portfolio">
+    <meta property="og:description" content="Welcome to my portfolio. View my works in Web Development and Design.">
+    <meta property="og:image" content="https://smildkung18.github.io/JameSin-Portfolio/img/profile.jpg">
+    <meta property="og:url" content="https://smildkung18.github.io/JameSin-Portfolio/">
+
+    <title data-lang-key="nav_contact">Contact - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="project_style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💼</text></svg>">
+
+    <style>
+        /* CSS เฉพาะหน้า Contact (White Theme) */
+        .contact-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            height: 100%;
+        }
+
+        /* ไอคอนวงกลม */
+        .contact-icon-circle {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #fff;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Effect ตอนชี้ที่รายการ */
+        .contact-item:hover .contact-icon-circle {
+            background: #fff;
+            color: #1d2b64;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        /* ปุ่ม Social Media */
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            background: #fff;
+            color: #1d2b64;
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Form Input Styles */
+        .form-control {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 10px;
+            padding: 12px 15px;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        ::placeholder {
+            color: rgba(255, 255, 255, 0.4) !important;
+        }
+
+        /* ปุ่ม Send Message */
+        .btn-send-custom {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .btn-send-custom:hover {
+            background: #fff;
+            color: #1d2b64;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+
+<body class="fade-in-start d-flex flex-column min-vh-100">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand logo" href="index.html">
+                    <i class="bi bi-code-square me-2"></i>PORTFOLIO
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html" data-lang-key="nav_home">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="works.html" data-lang-key="nav_works">Works</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#experience"
+                                data-lang-key="nav_exp">Journey</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html"
+                                data-lang-key="nav_contact">Contact</a></li>
+                    </ul>
+                    <div class="lang-switcher ms-3">
+                        <a href="#" id="lang-th" onclick="setLanguage('th'); return false;">TH</a>
+                        <span class="lang-divider">|</span>
+                        <a href="#" id="lang-en" onclick="setLanguage('en'); return false;">EN</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="py-5 mt-5">
+        <div class="container">
+
+            <div class="text-center mb-5" data-aos="fade-down">
+                <h2 class="text-white fw-bold display-5" data-lang-key="contact_title">Get In Touch</h2>
+                <p class="text-white-50 lead" data-lang-key="contact_desc">Feel free to send me a message.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="contact-box">
+                        <h3 class="text-white mb-4" data-lang-key="info_title">Contact Info</h3>
+
+                        <div class="d-flex align-items-center mb-4 contact-item">
+                            <div class="contact-icon-circle me-3">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-white-50 mb-1" data-lang-key="info_phone">Phone</h6>
+                                <p class="text-white mb-0 fw-bold">0957308201</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-4 contact-item">
+                            <div class="contact-icon-circle me-3">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-white-50 mb-1" data-lang-key="info_email">Email</h6>
+                                <p class="text-white mb-0 fw-bold">sg.design731618@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-5 contact-item">
+                            <div class="contact-icon-circle me-3">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-white-50 mb-1" data-lang-key="info_location">Location</h6>
+                                <p class="text-white mb-0 fw-bold">Bangkok, Thailand</p>
+                            </div>
+                        </div>
+
+                        <h5 class="text-white mb-3" data-lang-key="info_social">Follow Me</h5>
+                        <div class="d-flex gap-3">
+                            <a href="https://www.facebook.com/SENIJAME" target="_blank" class="social-btn"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="https://line.me/R/ti/p/~master_dog" target="_blank" class="social-btn"><i
+                                    class="bi bi-line"></i></a>
+                            <a href="https://github.com/Smildkung18" target="_blank" class="social-btn"><i
+                                    class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/seni-gohsongnoen-9669a6290?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                                target="_blank" class="social-btn"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.instagram.com/jahram.js" target="_blank" class="social-btn">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="contact-box">
+                        <h3 class="text-white mb-4" data-lang-key="form_title">Send Message</h3>
+
+                        <form action="https://formspree.io/f/xyzqqaej" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="text-white-50 mb-2 small" data-lang-key="label_name">Your Name</label>
+                                    <input type="text" name="name" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="text-white-50 mb-2 small" data-lang-key="label_email">Your
+                                        Email</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="text-white-50 mb-2 small"
+                                        data-lang-key="label_subject">Subject</label>
+                                    <input type="text" name="subject" class="form-control" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="text-white-50 mb-2 small"
+                                        data-lang-key="label_message">Message</label>
+                                    <textarea name="message" class="form-control" rows="5" required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-send-custom w-100 py-3 rounded-pill fw-bold"
+                                        id="sendBtn">
+                                        <i class="bi bi-send-fill me-2"></i> <span data-lang-key="btn_send">Send
+                                            Message</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="mt-auto py-3 text-center text-white-50">
+        <div class="container">
+            <small>&copy; 2024 Seni Portfolio. All Rights Reserved.</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="lang.js"></script>
+    <script src="translate.js"></script>
+
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.remove('fade-in-start');
+            translatePage();
+        });
+    </script>
+
+    <script>
+        document.addEventListener('click', function (e) {
+            let ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+            ripple.style.left = e.clientX + 'px';
+            ripple.style.top = e.clientY + 'px';
+            document.body.appendChild(ripple);
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    </script>
+</body>
+
+</html>
